@@ -9,6 +9,8 @@ public class twentyfortyeight {
 
     public static int[][] grid = new int[gridWidth][gridHeight]; //Create an array for the grid
 
+    public static boolean lossConditionScreenFilled = false;
+
     public static void main(String[] args) {
 
         //At the start of the game
@@ -32,6 +34,8 @@ public class twentyfortyeight {
 
             placePiece(); //Randomly place a new piece
         }
+
+        System.exit(0); //When the while loop ends, terminate the program
 
     }
 
@@ -72,8 +76,9 @@ public class twentyfortyeight {
             //Place randomNumber into the grid
             grid[randomSquareX][randomSquareY] = randomNumber;
         }
-        else
-            System.err.println("Did not print a new number to the grid, as it is full!"); //INFO FOR DEBUGGING
+        else {
+            lossConditionScreenFilled = true;
+        }
 
 
 
@@ -88,9 +93,9 @@ public class twentyfortyeight {
                 for (int j = 0; j < gridHeight; j++) {
 
                     if(grid[i][j] == 0)
-                        System.out.print("[---]");
+                        System.out.print("|---|");
                     else
-                        System.out.print("[ " + grid[i][j] + " ]");
+                        System.out.print("| " + grid[i][j] + " |");
 
             }
 
@@ -119,27 +124,80 @@ public class twentyfortyeight {
     }
 
 
-    public static void moveLeft(){
-        System.out.println("Grid moved left!");
+    public static void moveLeft() {
 
+        //Move the numbers as far to the left as possible
         //Loop through the array
-        for (int i = 0; i < gridWidth; i++)
-            for (int j = 0; j < gridHeight; j++)
-                if(grid[i][j] != 0) { //If the location is not empty
-                    if(grid[i][0] != grid[i][j]){ //If the number is not already all the way to the left
+        for (int i = 0; i < gridWidth; i++) {
+            for (int j = 0; j < gridHeight; j++) {
 
-                        grid[i][0] = grid[i][j]; //Set the leftmost location to the new number
-                        grid[i][j] = 0; //And set the old location to 0
+                if (grid[i][j] != 0) { //If the location is not empty
+
+
+                    for (int k = 0; k <= j; k++) { //Loop through all of the empty squares to the left of the current number
+
+
+                        //If the current square isn't filled with a zero
+                        if (grid[i][k] == 0) {
+
+                            grid[i][k] = grid[i][j]; //fill the new square to the old number
+                            grid[i][j] = 0; //fill the old square with a zero
+
+                        }
+
+                    }
+
+                    if(j<gridHeight-1){ //If j is in any square but the ones on the right edge
+                        if(grid[i][j] == grid[i][j+1]){ //And if the number matches the one to the right of it
+
+                            grid[i][j] = grid[i][j] * 2; //Multiply the leftmost number by 2
+                            grid[i][j+1] = 0; //And set the old number to 0
+
+                        }
                     }
 
                 }
-
-
+            }
+        }
     }
 
     public static void moveRight(){
-        System.out.println("Grid moved right!");
+
+        //Move the numbers as far to the right as possible
+        //Loop through the array
+        for (int i = 0; i < gridWidth; i++) {
+            for (int j = 0; j < gridHeight; j++) {
+
+                if (grid[i][j] != 0) { //If the location is not empty
+
+
+                    for (int k = gridHeight-1; k > j; k--) { //Loop through all of the empty squares to the right of the current number
+
+                        //If the current square isn't filled with a zero
+                        if (grid[i][k] == 0) {
+
+                            grid[i][k] = grid[i][j]; //fill the new square to the old number
+                            grid[i][j] = 0; //fill the old square with a zero
+
+                        }
+
+                    }
+
+                    if(j>0){ //If j is in any square but the ones on the left edge
+                        if(grid[i][j] == grid[i][j-1]){ //And if the number matches the one to the left of it
+
+                            grid[i][j] = grid[i][j] * 2; //Multiply the rightmost number by 2
+                            grid[i][j-1] = 0; //And set the old number to 0
+
+                        }
+                    }
+
+                }
+            }
+        }
     }
+
+
 
     public static void moveUp(){
         System.out.println("Grid moved up!");
@@ -150,7 +208,13 @@ public class twentyfortyeight {
     }
 
     public static boolean gameOver(){
-        return false;
+
+        if(lossConditionScreenFilled){
+            System.err.println("The grid filled up! Game over!"); //The player lost, because the screen is filled up
+            return true;
+        }
+        else
+            return false;
     }
 }
 
