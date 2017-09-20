@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class twentyfortyeight {
 
     //Create variables
-    public static int gridWidth = 4; //Number of squares wide the grid will be
-    public static int gridHeight = gridWidth; //Number of squares high the grid will be
+    public static int gridHeight = 4; //Number of squares high the grid will be
+    public static int gridWidth = gridHeight; //Number of squares wide the grid will be
 
-    public static int[][] grid = new int[gridWidth][gridHeight]; //Create an array for the grid
+    public static int[][] grid = new int[gridHeight][gridWidth]; //Create an array for the grid
 
     public static boolean lossConditionScreenFilled = false;
 
@@ -42,8 +42,8 @@ public class twentyfortyeight {
     public static void placePiece(){
 
         //Initialize variables
-        int randomSquareX = (int)(Math.random()*gridWidth); //Pick a random spot on the grid, on the X coord
-        int randomSquareY = (int)(Math.random()*gridHeight);  //Pick a random spot on the grid, on the Y coord
+        int randomSquareX = (int)(Math.random()*gridHeight); //Pick a random spot on the grid, on the X coord
+        int randomSquareY = (int)(Math.random()*gridWidth);  //Pick a random spot on the grid, on the Y coord
         int randomNumber; //Either a 2 or a 4, depending on randomNumberSelector
         int randomNumberSelector = (int)(Math.random()*10); //Pick a random number, 1-10
         // This will determine whether it appears as a 2 or a 4
@@ -57,8 +57,8 @@ public class twentyfortyeight {
 
 
         //Check to see if the grid is full
-        for (int i = 0; i < gridWidth; i++)
-            for (int j = 0; j < gridHeight; j++)
+        for (int i = 0; i < gridHeight; i++)
+            for (int j = 0; j < gridWidth; j++)
                 if(grid[i][j] == 0) {
                     gridIsFull = false;
                     break;
@@ -68,8 +68,8 @@ public class twentyfortyeight {
         if(!gridIsFull){
             if(grid[randomSquareX][randomSquareY] != 0) { //If the location is not empty
                 while (grid[randomSquareX][randomSquareY] != 0) { //Loop until an empty location is found
-                    randomSquareX = (int) (Math.random() * gridWidth); //Pick a random spot on the grid, on the X coord
-                    randomSquareY = (int) (Math.random() * gridHeight);  //Pick a random spot on the grid, on the Y coord
+                    randomSquareX = (int) (Math.random() * gridHeight); //Pick a random spot on the grid, on the X coord
+                    randomSquareY = (int) (Math.random() * gridWidth);  //Pick a random spot on the grid, on the Y coord
                 }
             }
 
@@ -88,9 +88,9 @@ public class twentyfortyeight {
 
         //Loop through the 2D array and print out a 4 x 4 grid
 
-        for (int i = 0; i < gridWidth; i++) {
+        for (int i = 0; i < gridHeight; i++) {
 
-                for (int j = 0; j < gridHeight; j++) {
+                for (int j = 0; j < gridWidth; j++) {
 
                     if(grid[i][j] == 0)
                         System.out.print("|---|");
@@ -126,36 +126,30 @@ public class twentyfortyeight {
 
     public static void moveLeft() {
 
-        //Move the numbers as far to the left as possible
-        //Loop through the array
-        for (int i = 0; i < gridWidth; i++) {
-            for (int j = 0; j < gridHeight; j++) {
+        for (int i = 0; i < gridHeight; i++) {
+            for (int j = 0; j < gridWidth; j++) {
 
-                if (grid[i][j] != 0) { //If the location is not empty
+                if(grid[i][j] != 0) {     //If the current location is not empty
 
+                    for(int k = j; k >= 0; k--){ //Loop through all of the empty squares to the left of the current number
 
-                    for (int k = 0; k <= j; k++) { //Loop through all of the empty squares to the left of the current number
+                        if(grid[i][k] == 0){ //If the current square is empty
 
-
-                        //If the current square isn't filled with a zero
-                        if (grid[i][k] == 0) {
-
-                            grid[i][k] = grid[i][j]; //fill the new square to the old number
-                            grid[i][j] = 0; //fill the old square with a zero
+                            grid[i][k] = grid[i][k+1]; //Fill the square with the number to the right of it
+                            grid[i][k+1] = 0; //Then empty the old square
 
                         }
+                        if(k < gridWidth-1) { //If the current square is not the one on the right edge
+                            if (grid[i][k + 1] == grid[i][k]) { //And if the current square's value is equal to the one to the right of it
 
-                    }
+                                grid[i][k] *= 2; //Multiply the current square's value by 2
+                                grid[i][k + 1] = 0; //And empty the old square
+                                break; //End the for loop
 
-                    if(j<gridHeight-1){ //If j is in any square but the ones on the right edge
-                        if(grid[i][j] == grid[i][j+1]){ //And if the number matches the one to the right of it
 
-                            grid[i][j] = grid[i][j] * 2; //Multiply the leftmost number by 2
-                            grid[i][j+1] = 0; //And set the old number to 0
-
+                            }
                         }
                     }
-
                 }
             }
         }
@@ -163,35 +157,28 @@ public class twentyfortyeight {
 
     public static void moveRight(){
 
-        //Move the numbers as far to the right as possible
-        //Loop through the array
-        for (int i = 0; i < gridWidth; i++) {
-            for (int j = 0; j < gridHeight; j++) {
+        for (int i = 0; i < gridHeight; i++) {
+            for (int j = 0; j < gridWidth; j++) {
 
-                if (grid[i][j] != 0) { //If the location is not empty
+                if(grid[i][j] != 0) {     //If the current location is not empty
 
+                    for(int k = j; k < gridWidth; k++){ //Loop through all of the empty squares to the left of the current number
 
-                    for (int k = gridHeight-1; k > j; k--) { //Loop through all of the empty squares to the right of the current number
+                        if(grid[i][k] == 0){ //If the current square is empty
 
-                        //If the current square isn't filled with a zero
-                        if (grid[i][k] == 0) {
-
-                            grid[i][k] = grid[i][j]; //fill the new square to the old number
-                            grid[i][j] = 0; //fill the old square with a zero
+                            grid[i][k] = grid[i][k-1]; //Fill the square with the number to the left of it
+                            grid[i][k-1] = 0; //Then empty the old square
 
                         }
+                        if(k > 0) { //If the current square is not the one on the left edge
+                            if (grid[i][k - 1] == grid[i][k]) { //And if the current square's value is equal to the one to the left of it
 
-                    }
-
-                    if(j>0){ //If j is in any square but the ones on the left edge
-                        if(grid[i][j] == grid[i][j-1]){ //And if the number matches the one to the left of it
-
-                            grid[i][j] = grid[i][j] * 2; //Multiply the rightmost number by 2
-                            grid[i][j-1] = 0; //And set the old number to 0
-
+                                grid[i][k] *= 2; //Multiply the current square's value by 2
+                                grid[i][k - 1] = 0; //And empty the old square
+                                break;
+                            }
                         }
                     }
-
                 }
             }
         }
