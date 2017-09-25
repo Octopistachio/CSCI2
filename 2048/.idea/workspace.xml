@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbbe8d88-908f-4aca-ba44-de59c062aeb2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/twentyfortyeight.java" afterPath="$PROJECT_DIR$/src/twentyfortyeight.java" />
     </list>
@@ -19,16 +18,9 @@
       <file leaf-file-name="twentyfortyeight.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/twentyfortyeight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="106" column="43" lean-forward="true" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="44" />
-              <folding>
-                <element signature="method#placePiece#0;class#twentyfortyeight#0" expanded="false" />
-                <element signature="method#userInput#0;class#twentyfortyeight#0" expanded="false" />
-                <element signature="method#moveLeft#0;class#twentyfortyeight#0" expanded="false" />
-                <element signature="method#moveRight#0;class#twentyfortyeight#0" expanded="false" />
-                <element signature="method#moveUp#0;class#twentyfortyeight#0" expanded="false" />
-                <element signature="method#moveDown#0;class#twentyfortyeight#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="116">
+              <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,10 +72,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-33" />
-    <option name="y" value="139" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1612" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -103,6 +95,7 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -120,7 +113,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,13 +263,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.20977917" sideWeight="0.27452415" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24921136" sideWeight="0.72547585" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16561514" sideWeight="0.72547585" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2367647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27720588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -289,6 +280,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -305,14 +297,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#placePiece#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#userInput#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveLeft#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveRight#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveUp#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveDown#0;class#twentyfortyeight#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -328,14 +313,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#placePiece#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#userInput#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveLeft#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveRight#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveUp#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveDown#0;class#twentyfortyeight#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -351,14 +329,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#placePiece#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#userInput#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveLeft#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveRight#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveUp#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveDown#0;class#twentyfortyeight#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -374,14 +345,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#placePiece#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#userInput#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveLeft#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveRight#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveUp#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveDown#0;class#twentyfortyeight#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -397,14 +361,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#placePiece#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#userInput#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveLeft#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveRight#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveUp#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveDown#0;class#twentyfortyeight#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -420,14 +377,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#placePiece#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#userInput#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveLeft#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveRight#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveUp#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveDown#0;class#twentyfortyeight#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -443,40 +393,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#placePiece#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#userInput#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveLeft#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveRight#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveUp#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveDown#0;class#twentyfortyeight#0" expanded="false" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/twentyfortyeight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/twentyfortyeight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.java" />
     <entry file="file://$PROJECT_DIR$/src/test.java" />
     <entry file="file://$PROJECT_DIR$/src/test2.java" />
+    <entry file="file://$PROJECT_DIR$/src/twentyfortyeight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/2048.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/twentyfortyeight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="106" column="43" lean-forward="true" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="44" />
-          <folding>
-            <element signature="method#placePiece#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#userInput#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveLeft#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveRight#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveUp#0;class#twentyfortyeight#0" expanded="false" />
-            <element signature="method#moveDown#0;class#twentyfortyeight#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

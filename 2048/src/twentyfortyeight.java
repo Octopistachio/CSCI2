@@ -94,8 +94,6 @@ public class twentyfortyeight {
             lossConditionScreenFilled = true;
         }
 
-
-
     }
 
     /**
@@ -310,6 +308,7 @@ public class twentyfortyeight {
 
         if(lossConditionScreenFilled){
             System.err.println("The grid filled up! Game over!"); //The player lost, because the screen is filled up
+            System.err.println("Your score was " + currentScore + "!"); //The player lost, because the screen is filled up
             return true;
         }
         else if(winConditionTwentyFortyEightReached){
