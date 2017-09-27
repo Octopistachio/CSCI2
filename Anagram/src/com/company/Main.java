@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static ArrayList<String> WordList = new ArrayList<>();
-    public static ArrayList<String> WordListSorted = new ArrayList<>();
-    public static ArrayList<String> MatchingWords = new ArrayList<>();
+    private static ArrayList<String> WordList = new ArrayList<>();
+    private static ArrayList<String> WordListSorted = new ArrayList<>();
+    private static ArrayList<String> MatchingWords = new ArrayList<>();
 
-    public static String userWord;
+    private static String userWord;
 
     public static void main(String[] args) {
 
@@ -38,7 +38,7 @@ public class Main {
 
     }
 
-    public static void createLists(){
+    private static void createLists(){
 
         try {
             File file = new File("dictionary.txt");
@@ -58,7 +58,7 @@ public class Main {
 
     }
 
-    public static String sortWordAlphabetically(String word){
+    private static String sortWordAlphabetically(String word){
 
         char[] charArray = word.toCharArray();
         Arrays.sort(charArray);
@@ -66,7 +66,7 @@ public class Main {
 
     }
 
-    public static void printAnagrams(){
+    private static void printAnagrams(){
 
         if(MatchingWords.size() != 0){
             if(MatchingWords.size() != 1){
