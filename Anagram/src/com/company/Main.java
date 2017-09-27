@@ -36,7 +36,6 @@ public class Main {
 
         printAnagrams();
 
-
     }
 
     public static void createLists(){
@@ -70,18 +69,20 @@ public class Main {
     public static void printAnagrams(){
 
         if(MatchingWords.size() != 0){
-            System.out.print("The anagrams for \"" + userWord + "\" are: ");
-            for( int i = 0; i < MatchingWords.size(); i++) {
-                if(i != MatchingWords.size()-1)
-                    System.out.print("\"" +MatchingWords.get(i) + ",\" ");
-                else
-                    System.out.print("and \"" + MatchingWords.get(i) + ".\"");
-
+            if(MatchingWords.size() != 1){
+                System.out.print("The anagrams for \"" + userWord + "\" are ");
+                for( int i = 0; i < MatchingWords.size(); i++) {
+                    if(i != MatchingWords.size()-1)
+                        System.out.print("\"" + MatchingWords.get(i) + ",\" ");
+                    else
+                        System.out.print("and \"" + MatchingWords.get(i) + ".\"");
+                }
             }
+            else
+                System.out.print("The anagram for \"" + userWord + "\" is \"" + MatchingWords.get(0) + ".\"");
         }
-        else{
-            System.out.println("There are no anagrams for \"" + userWord + ".\"");
-        }
+        else
+            System.out.print("There are no anagrams for \"" + userWord + ".\"");
 
     }
 
