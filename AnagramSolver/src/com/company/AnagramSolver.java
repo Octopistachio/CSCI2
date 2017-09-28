@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author Matthew Wilson
  */
-public class Main {
+public class AnagramSolver {
 
     private static ArrayList<String> WordList = new ArrayList<>(); //The list of all words in dictionary.txt
     private static ArrayList<String> WordListSorted = new ArrayList<>(); //The list of all words in dictionary.txt, BUT each word is sorted alphabetically
