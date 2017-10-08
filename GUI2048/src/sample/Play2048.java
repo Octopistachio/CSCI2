@@ -341,5 +341,25 @@ public class Play2048 {
 
         return false;
     }
+
+    static int getGridHeight() {
+        return gridHeight;
+    }
+
+    static int getGridWidth() {
+        return gridWidth;
+    }
+
+    public static int getHighestNumber() {
+        return highestNumber;
+    }
+
+    static int getCurrentScore() {
+        return currentScore;
+    }
+
+    static int getGrid(int i, int j) {
+        return grid[i][j];
+    }
 }
 
