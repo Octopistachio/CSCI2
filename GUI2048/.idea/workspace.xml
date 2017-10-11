@@ -59,52 +59,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="GUI2048.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/GUI2048.java">
+        <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="141" column="51" lean-forward="false" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
+            <state relative-caret-position="300">
+              <caret line="205" column="5" lean-forward="true" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="class#4220:4416" expanded="false" />
+                <element signature="class#4456:4653" expanded="false" />
+                <element signature="class#4690:4884" expanded="false" />
+                <element signature="class#4923:5119" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GridPane.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/GridPane.java">
+      <file leaf-file-name="Border.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/Border.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="423" column="39" lean-forward="true" selection-start-line="423" selection-start-column="39" selection-end-line="423" selection-end-column="39" />
-              <folding>
-                <element signature="e#18482#18483#0" expanded="true" />
-                <element signature="e#18548#18549#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Region.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/Region.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="568" column="77" lean-forward="false" selection-start-line="568" selection-start-column="77" selection-end-line="568" selection-end-column="77" />
+            <state relative-caret-position="127">
+              <caret line="88" column="19" lean-forward="false" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Play2048.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Play2048.java">
+        <entry file="file://$PROJECT_DIR$/src/Play2048.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+            <state relative-caret-position="136">
+              <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
               <folding>
-                <element signature="method#moveLeft#0;class#Play2048#0" expanded="false" />
-                <element signature="method#moveRight#0;class#Play2048#0" expanded="false" />
-                <element signature="method#moveUp#0;class#Play2048#0" expanded="false" />
-                <element signature="method#moveDown#0;class#Play2048#0" expanded="false" />
-                <element signature="e#12864#12865#0" expanded="true" />
-                <element signature="e#12900#12901#0" expanded="true" />
+                <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
+                <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -115,6 +101,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>moveL</find>
+      <find>previousGrid</find>
+      <find>WinL</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -134,13 +122,15 @@
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Play2048.java" />
         <option value="$PROJECT_DIR$/src/sample/GUI2048.java" />
+        <option value="$PROJECT_DIR$/src/GUI2048.java" />
+        <option value="$PROJECT_DIR$/src/Play2048.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1377" />
     <option name="height" value="780" />
   </component>
   <component name="ProjectReloadState">
@@ -161,9 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,17 +163,14 @@
               <item name="GUI2048" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GUI2048" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GUI2048" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,7 +214,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="sample.GUI2048" />
+      <option name="MAIN_CLASS_NAME" value="GUI2048" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -251,10 +235,10 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="sample.Play2048" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="Play2048" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -385,27 +369,28 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="780" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35173503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25110132" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25036603" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -432,9 +417,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/sample/Play2048.java</url>
-          <line>308</line>
-          <properties class="sample.Play2048" method="gameOver">
+          <url>file://$PROJECT_DIR$/src/Play2048.java</url>
+          <line>311</line>
+          <properties class="Play2048" method="gameOver">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
@@ -449,37 +434,137 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/GUI2048.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1887">
+          <caret line="111" column="13" lean-forward="true" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="class#4220:4416" expanded="false" />
+            <element signature="class#4456:4653" expanded="false" />
+            <element signature="class#4690:4884" expanded="false" />
+            <element signature="class#4923:5119" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Play2048.java">
+    <entry file="file://$PROJECT_DIR$/src/Play2048.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding>
+            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="class#4220:4416" expanded="false" />
+            <element signature="class#4456:4653" expanded="false" />
+            <element signature="class#4690:4884" expanded="false" />
+            <element signature="class#4923:5119" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/glass/ui/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9469">
+          <caret line="557" column="9" lean-forward="true" selection-start-line="557" selection-start-column="9" selection-end-line="557" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Play2048.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6188">
+          <caret line="364" column="0" lean-forward="true" selection-start-line="364" selection-start-column="0" selection-end-line="364" selection-end-column="0" />
+          <folding>
+            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="class#4220:4416" expanded="false" />
+            <element signature="class#4456:4653" expanded="false" />
+            <element signature="class#4690:4884" expanded="false" />
+            <element signature="class#4923:5119" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/GridPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7191">
+          <caret line="423" column="39" lean-forward="true" selection-start-line="423" selection-start-column="39" selection-end-line="423" selection-end-column="39" />
+          <folding>
+            <element signature="e#18482#18483#0" expanded="false" />
+            <element signature="e#18548#18549#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9656">
+          <caret line="568" column="77" lean-forward="false" selection-start-line="568" selection-start-column="77" selection-end-line="568" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Play2048.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding>
+            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="class#4220:4416" expanded="false" />
+            <element signature="class#4456:4653" expanded="false" />
+            <element signature="class#4690:4884" expanded="false" />
+            <element signature="class#4923:5119" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Play2048.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6001">
           <caret line="353" column="29" lean-forward="true" selection-start-line="353" selection-start-column="29" selection-end-line="353" selection-end-column="29" />
           <folding>
-            <element signature="method#moveLeft#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveRight#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveUp#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveDown#0;class#Play2048#0" expanded="false" />
-            <element signature="e#12864#12865#0" expanded="true" />
-            <element signature="e#12900#12901#0" expanded="true" />
+            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GUI2048.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="class#4220:4416" expanded="false" />
+            <element signature="class#4456:4653" expanded="false" />
+            <element signature="class#4690:4884" expanded="false" />
+            <element signature="class#4923:5119" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -498,42 +583,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Play2048.java">
+    <entry file="file://$PROJECT_DIR$/src/Play2048.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5950">
           <caret line="350" column="5" lean-forward="true" selection-start-line="350" selection-start-column="5" selection-end-line="350" selection-end-column="5" />
           <folding>
-            <element signature="method#moveLeft#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveRight#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveUp#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveDown#0;class#Play2048#0" expanded="false" />
-            <element signature="e#12864#12865#0" expanded="true" />
-            <element signature="e#12900#12901#0" expanded="true" />
+            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GUI2048.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="class#4220:4416" expanded="false" />
+            <element signature="class#4456:4653" expanded="false" />
+            <element signature="class#4690:4884" expanded="false" />
+            <element signature="class#4923:5119" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Play2048.java">
+    <entry file="file://$PROJECT_DIR$/src/Play2048.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="method#moveLeft#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveRight#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveUp#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveDown#0;class#Play2048#0" expanded="false" />
-            <element signature="e#12864#12865#0" expanded="true" />
-            <element signature="e#12900#12901#0" expanded="true" />
+            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -569,46 +649,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Play2048.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/GridPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+        <state relative-caret-position="5831">
+          <caret line="423" column="39" lean-forward="false" selection-start-line="423" selection-start-column="39" selection-end-line="423" selection-end-column="39" />
           <folding>
-            <element signature="method#moveLeft#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveRight#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveUp#0;class#Play2048#0" expanded="false" />
-            <element signature="method#moveDown#0;class#Play2048#0" expanded="false" />
-            <element signature="e#12864#12865#0" expanded="true" />
-            <element signature="e#12900#12901#0" expanded="true" />
+            <element signature="e#18482#18483#0" expanded="false" />
+            <element signature="e#18548#18549#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/GridPane.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/glass/ui/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="423" column="39" lean-forward="true" selection-start-line="423" selection-start-column="39" selection-end-line="423" selection-end-column="39" />
-          <folding>
-            <element signature="e#18482#18483#0" expanded="true" />
-            <element signature="e#18548#18549#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="8874">
+          <caret line="557" column="9" lean-forward="false" selection-start-line="557" selection-start-column="9" selection-end-line="557" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/Region.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="568" column="77" lean-forward="false" selection-start-line="568" selection-start-column="77" selection-end-line="568" selection-end-column="77" />
+        <state relative-caret-position="202">
+          <caret line="558" column="22" lean-forward="false" selection-start-line="558" selection-start-column="22" selection-end-line="558" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GUI2048.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/Border.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="141" column="51" lean-forward="false" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
+        <state relative-caret-position="127">
+          <caret line="88" column="19" lean-forward="false" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Play2048.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="205" column="5" lean-forward="true" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
+          <folding>
+            <element signature="class#4220:4416" expanded="false" />
+            <element signature="class#4456:4653" expanded="false" />
+            <element signature="class#4690:4884" expanded="false" />
+            <element signature="class#4923:5119" expanded="false" />
           </folding>
         </state>
       </provider>

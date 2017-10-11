@@ -1,5 +1,3 @@
-package sample;
-
 import java.util.Scanner;
 
 /**
@@ -13,6 +11,7 @@ public class Play2048 {
     private static int gridWidth = gridHeight; //Number of squares wide the grid will be
 
     private static int[][] grid = new int[gridHeight][gridWidth]; //Create an array for the grid
+    private static int[][] previousGrid = new int[gridHeight][gridWidth]; //A grid containing the values of the squares before a move was taken
 
     private static int highestNumber = 2;
     private static int currentScore = 0;
@@ -28,6 +27,7 @@ public class Play2048 {
 
         //Continues throughout the game
         while(!gameOver()) {
+            MakeArraysEqual(grid, previousGrid);
             printBoard();
             switch(userInput()){ //Print the board, and check what direction the user input
 
@@ -42,7 +42,8 @@ public class Play2048 {
 
             }
 
-            placePiece(); //Randomly place a new piece
+            if(!DoArraysEqual(grid, previousGrid))
+                placePiece(); //Randomly place a new piece
         }
 
         System.exit(0); //When the while loop ends, terminate the program
@@ -202,7 +203,7 @@ public class Play2048 {
      */
     static void moveRight(){
 
-        for (int i = 0; i < gridHeight; i++) {
+        for (int i = gridHeight-1; i >= 0; i--) {
             for (int j = gridWidth-1; j >= 0; j--) {
 
                 if(grid[i][j] != 0) {     //If the current location is not empty
@@ -237,6 +238,7 @@ public class Play2048 {
      *  match
      */
     static void moveUp(){
+
         for (int i = 0; i < gridHeight; i++) {
             for (int j = 0; j < gridWidth; j++) {
 
@@ -273,8 +275,9 @@ public class Play2048 {
      *  match
      */
     static void moveDown(){
+
         for (int i = gridHeight - 1; i >= 0; i--) {
-            for (int j = 0; j < gridWidth; j++) {
+            for (int j = gridWidth - 1; j >= 0; j--) {
 
                 if(grid[i][j] != 0) {     //If the current location is not empty
 
@@ -342,6 +345,29 @@ public class Play2048 {
         return false;
     }
 
+    static boolean DoArraysEqual(int arrayOne[][], int arrayTwo[][]) {
+
+        boolean equal = true;
+
+        if(arrayOne.length == arrayTwo.length)
+            for (int i = 0; i < arrayOne.length; i++)
+                for(int j = 0; j < arrayOne.length; j++)
+                    if(arrayOne[i][j] != arrayTwo[i][j])
+                        equal = false;
+
+        return equal;
+
+    }
+
+    static void MakeArraysEqual(int arrayOne[][], int arrayTwo[][]) {
+
+        if(arrayOne.length == arrayTwo.length)
+            for (int i = 0; i < arrayOne.length; i++)
+                for(int j = 0; j < arrayOne.length; j++)
+                    arrayTwo[i][j] = arrayOne[i][j];
+
+    }
+
     static int getGridHeight() {
         return gridHeight;
     }
@@ -350,7 +376,7 @@ public class Play2048 {
         return gridWidth;
     }
 
-    public static int getHighestNumber() {
+    static int getHighestNumber() {
         return highestNumber;
     }
 
@@ -358,8 +384,14 @@ public class Play2048 {
         return currentScore;
     }
 
+    static int[][] getGrid() {
+        return grid;
+    }
+
     static int getGrid(int i, int j) {
         return grid[i][j];
     }
+
+    static int[][] getPreviousGrid() { return previousGrid; }
 }
 
