@@ -61,24 +61,12 @@
       <file leaf-file-name="GUI2048.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="205" column="5" lean-forward="true" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
+            <state relative-caret-position="51">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
-                <element signature="class#4220:4416" expanded="false" />
-                <element signature="class#4456:4653" expanded="false" />
-                <element signature="class#4690:4884" expanded="false" />
-                <element signature="class#4923:5119" expanded="false" />
+                <element signature="e#1903#1904#0" expanded="true" />
+                <element signature="e#1931#1932#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Border.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/Border.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="88" column="19" lean-forward="false" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,11 +74,23 @@
       <file leaf-file-name="Play2048.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Play2048.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+            <state relative-caret-position="153">
+              <caret line="191" column="47" lean-forward="false" selection-start-line="191" selection-start-column="47" selection-end-line="191" selection-end-column="47" />
               <folding>
-                <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
-                <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+                <element signature="method#printBoard#0;class#Play2048#0" expanded="false" />
+                <element signature="method#userInput#0;class#Play2048#0" expanded="false" />
+                <element signature="e#11976#11977#0" expanded="true" />
+                <element signature="e#12008#12009#0" expanded="true" />
+                <marker date="1507774152591" expanded="false" signature="12044:12055" ph=" { " />
+                <marker date="1507774152591" expanded="false" signature="12076:12082" ph=" }" />
+                <marker date="1507774152591" expanded="false" signature="12135:12146" ph=" { " />
+                <marker date="1507774152591" expanded="false" signature="12185:12191" ph=" }" />
+                <marker date="1507774152591" expanded="false" signature="12225:12236" ph=" { " />
+                <marker date="1507774152591" expanded="false" signature="12256:12262" ph=" }" />
+                <marker date="1507774152591" expanded="false" signature="12292:12303" ph=" { " />
+                <marker date="1507774152591" expanded="false" signature="12315:12321" ph=" }" />
+                <marker date="1507774152591" expanded="false" signature="12359:12370" ph=" { " />
+                <marker date="1507774152591" expanded="false" signature="12388:12394" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -103,7 +103,11 @@
       <find>moveL</find>
       <find>previousGrid</find>
       <find>WinL</find>
+      <find>gridWidth</find>
     </findStrings>
+    <replaceStrings>
+      <replace>GRID_SIZE</replace>
+    </replaceStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -128,10 +132,11 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
-    <option name="width" value="1377" />
-    <option name="height" value="780" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
@@ -151,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,10 +173,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GUI2048">
+  <component name="RunManager" selected="Application.Play2048">
     <configuration name="GUI2048" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -369,7 +374,7 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -418,8 +423,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Play2048.java</url>
-          <line>311</line>
-          <properties class="Play2048" method="gameOver">
+          <line>358</line>
+          <properties class="Play2048">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
@@ -436,13 +441,53 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/Border.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="19" lean-forward="false" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Play2048.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+          <folding>
+            <element signature="method#printBoard#0;class#Play2048#0" expanded="false" />
+            <element signature="method#userInput#0;class#Play2048#0" expanded="false" />
+            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <marker date="1507774152591" expanded="false" signature="12044:12055" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12076:12082" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12135:12146" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12185:12191" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12225:12236" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12256:12262" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12292:12303" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12315:12321" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12359:12370" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12388:12394" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
           <caret line="111" column="13" lean-forward="true" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
           <folding>
-            <element signature="class#4220:4416" expanded="false" />
-            <element signature="class#4456:4653" expanded="false" />
-            <element signature="class#4690:4884" expanded="false" />
-            <element signature="class#4923:5119" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -452,8 +497,20 @@
         <state relative-caret-position="51">
           <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
           <folding>
-            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
-            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Play2048#0" expanded="false" />
+            <element signature="method#userInput#0;class#Play2048#0" expanded="false" />
+            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <marker date="1507774152591" expanded="false" signature="12044:12055" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12076:12082" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12135:12146" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12185:12191" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12225:12236" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12256:12262" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12292:12303" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12315:12321" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12359:12370" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12388:12394" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -463,10 +520,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#4220:4416" expanded="false" />
-            <element signature="class#4456:4653" expanded="false" />
-            <element signature="class#4690:4884" expanded="false" />
-            <element signature="class#4923:5119" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -483,8 +538,20 @@
         <state relative-caret-position="6188">
           <caret line="364" column="0" lean-forward="true" selection-start-line="364" selection-start-column="0" selection-end-line="364" selection-end-column="0" />
           <folding>
-            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
-            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Play2048#0" expanded="false" />
+            <element signature="method#userInput#0;class#Play2048#0" expanded="false" />
+            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <marker date="1507774152591" expanded="false" signature="12044:12055" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12076:12082" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12135:12146" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12185:12191" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12225:12236" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12256:12262" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12292:12303" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12315:12321" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12359:12370" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12388:12394" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -494,10 +561,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#4220:4416" expanded="false" />
-            <element signature="class#4456:4653" expanded="false" />
-            <element signature="class#4690:4884" expanded="false" />
-            <element signature="class#4923:5119" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -526,8 +591,20 @@
         <state relative-caret-position="1139">
           <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
           <folding>
-            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
-            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Play2048#0" expanded="false" />
+            <element signature="method#userInput#0;class#Play2048#0" expanded="false" />
+            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <marker date="1507774152591" expanded="false" signature="12044:12055" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12076:12082" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12135:12146" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12185:12191" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12225:12236" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12256:12262" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12292:12303" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12315:12321" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12359:12370" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12388:12394" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -537,10 +614,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#4220:4416" expanded="false" />
-            <element signature="class#4456:4653" expanded="false" />
-            <element signature="class#4690:4884" expanded="false" />
-            <element signature="class#4923:5119" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -550,8 +625,20 @@
         <state relative-caret-position="6001">
           <caret line="353" column="29" lean-forward="true" selection-start-line="353" selection-start-column="29" selection-end-line="353" selection-end-column="29" />
           <folding>
-            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
-            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Play2048#0" expanded="false" />
+            <element signature="method#userInput#0;class#Play2048#0" expanded="false" />
+            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <marker date="1507774152591" expanded="false" signature="12044:12055" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12076:12082" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12135:12146" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12185:12191" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12225:12236" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12256:12262" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12292:12303" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12315:12321" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12359:12370" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12388:12394" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -561,10 +648,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#4220:4416" expanded="false" />
-            <element signature="class#4456:4653" expanded="false" />
-            <element signature="class#4690:4884" expanded="false" />
-            <element signature="class#4923:5119" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -588,8 +673,20 @@
         <state relative-caret-position="5950">
           <caret line="350" column="5" lean-forward="true" selection-start-line="350" selection-start-column="5" selection-end-line="350" selection-end-column="5" />
           <folding>
-            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
-            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Play2048#0" expanded="false" />
+            <element signature="method#userInput#0;class#Play2048#0" expanded="false" />
+            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <marker date="1507774152591" expanded="false" signature="12044:12055" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12076:12082" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12135:12146" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12185:12191" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12225:12236" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12256:12262" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12292:12303" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12315:12321" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12359:12370" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12388:12394" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -599,10 +696,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#4220:4416" expanded="false" />
-            <element signature="class#4456:4653" expanded="false" />
-            <element signature="class#4690:4884" expanded="false" />
-            <element signature="class#4923:5119" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,8 +707,20 @@
         <state relative-caret-position="850">
           <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
-            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Play2048#0" expanded="false" />
+            <element signature="method#userInput#0;class#Play2048#0" expanded="false" />
+            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <marker date="1507774152591" expanded="false" signature="12044:12055" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12076:12082" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12135:12146" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12185:12191" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12225:12236" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12256:12262" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12292:12303" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12315:12321" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12359:12370" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12388:12394" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -677,7 +784,7 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/Border.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
+        <state relative-caret-position="731">
           <caret line="88" column="19" lean-forward="false" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
           <folding />
         </state>
@@ -685,24 +792,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Play2048.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+        <state relative-caret-position="153">
+          <caret line="191" column="47" lean-forward="false" selection-start-line="191" selection-start-column="47" selection-end-line="191" selection-end-column="47" />
           <folding>
-            <element signature="method#DoArraysEqual#0;class#Play2048#0" expanded="false" />
-            <element signature="method#MakeArraysEqual#0;class#Play2048#0" expanded="false" />
+            <element signature="method#printBoard#0;class#Play2048#0" expanded="false" />
+            <element signature="method#userInput#0;class#Play2048#0" expanded="false" />
+            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <marker date="1507774152591" expanded="false" signature="12044:12055" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12076:12082" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12135:12146" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12185:12191" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12225:12236" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12256:12262" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12292:12303" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12315:12321" ph=" }" />
+            <marker date="1507774152591" expanded="false" signature="12359:12370" ph=" { " />
+            <marker date="1507774152591" expanded="false" signature="12388:12394" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI2048.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="205" column="5" lean-forward="true" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
+        <state relative-caret-position="51">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="class#4220:4416" expanded="false" />
-            <element signature="class#4456:4653" expanded="false" />
-            <element signature="class#4690:4884" expanded="false" />
-            <element signature="class#4923:5119" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
           </folding>
         </state>
       </provider>

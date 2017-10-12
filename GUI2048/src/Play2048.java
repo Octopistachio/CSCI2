@@ -7,11 +7,12 @@ import java.util.Scanner;
 
 public class Play2048 {
 
-    private static int gridHeight = 4; //Number of squares high the grid will be
-    private static int gridWidth = gridHeight; //Number of squares wide the grid will be
+    private static int GRID_SIZE = 4; //Number of squares high the grid will be
 
-    private static int[][] grid = new int[gridHeight][gridWidth]; //Create an array for the grid
-    private static int[][] previousGrid = new int[gridHeight][gridWidth]; //A grid containing the values of the squares before a move was taken
+    private static int[][] grid = new int[GRID_SIZE][GRID_SIZE]; //Create an array for the grid
+    private static int[][] previousGrid = new int[GRID_SIZE][GRID_SIZE]; //A grid containing the values of the squares before a move was taken
+
+    private static boolean isDoneCombining = false;
 
     private static int highestNumber = 2;
     private static int currentScore = 0;
@@ -57,8 +58,8 @@ public class Play2048 {
     static void placePiece(){
 
         //Initialize variables
-        int randomSquareX = (int)(Math.random()*gridHeight); //Pick a random spot on the grid, on the X coord
-        int randomSquareY = (int)(Math.random()*gridWidth);  //Pick a random spot on the grid, on the Y coord
+        int randomSquareX = (int)(Math.random()*GRID_SIZE); //Pick a random spot on the grid, on the X coord
+        int randomSquareY = (int)(Math.random()*GRID_SIZE);  //Pick a random spot on the grid, on the Y coord
         int randomNumber; //Either a 2 or a 4, depending on randomNumberSelector
         int randomNumberSelector = (int)(Math.random()*10); //Pick a random number, 1-10
         // This will determine whether it appears as a 2 or a 4
@@ -74,8 +75,8 @@ public class Play2048 {
             highestNumber = randomNumber;
 
         //Check to see if the grid is full
-        for (int i = 0; i < gridHeight; i++)
-            for (int j = 0; j < gridWidth; j++)
+        for (int i = 0; i < GRID_SIZE; i++)
+            for (int j = 0; j < GRID_SIZE; j++)
                 if(grid[i][j] == 0) {
                     gridIsFull = false;
                     break;
@@ -85,8 +86,8 @@ public class Play2048 {
         if(!gridIsFull){
             if(grid[randomSquareX][randomSquareY] != 0) { //If the location is not empty
                 while (grid[randomSquareX][randomSquareY] != 0) { //Loop until an empty location is found
-                    randomSquareX = (int) (Math.random() * gridHeight); //Pick a random spot on the grid, on the X coord
-                    randomSquareY = (int) (Math.random() * gridWidth);  //Pick a random spot on the grid, on the Y coord
+                    randomSquareX = (int) (Math.random() * GRID_SIZE); //Pick a random spot on the grid, on the X coord
+                    randomSquareY = (int) (Math.random() * GRID_SIZE);  //Pick a random spot on the grid, on the Y coord
                 }
             }
 
@@ -104,17 +105,17 @@ public class Play2048 {
      */
     private static void printBoard() {
 
-        for (int i = 0; i < gridHeight; i++)
-            for (int j = 0; j < gridWidth; j++)
+        for (int i = 0; i < GRID_SIZE; i++)
+            for (int j = 0; j < GRID_SIZE; j++)
                 if (grid[i][j] > highestNumber)
                     highestNumber = grid[i][j];
 
         System.out.println("Highest Number: " + highestNumber + " Current Score: " + currentScore);
 
         //Loop through the 2D array and print out a 4 x 4 grid
-        for (int i = 0; i < gridHeight; i++) {
+        for (int i = 0; i < GRID_SIZE; i++) {
 
-            for (int j = 0; j < gridWidth; j++) {
+            for (int j = 0; j < GRID_SIZE; j++) {
 
                 if (grid[i][j] > highestNumber)
                     highestNumber = grid[i][j];
@@ -164,36 +165,49 @@ public class Play2048 {
      *  left, and combine any numbers that
      *  match
      */
-    static void moveLeft() {
-
-        for (int i = 0; i < gridHeight; i++) {
-            for (int j = 0; j < gridWidth; j++) {
-
-                if(grid[i][j] != 0) {     //If the current location is not empty
-
-                    for(int k = j; k >= 0; k--){ //Loop through all of the empty squares to the left of the current number
-
-                        if(grid[i][k] == 0){ //If the current square is empty
-
-                            grid[i][k] = grid[i][k+1]; //Fill the square with the number to the right of it
-                            grid[i][k+1] = 0; //Then empty the old square
-
-                        }
-                        if(k < gridWidth-1) { //If the current square is not the one on the right edge
-                            if (grid[i][k + 1] == grid[i][k]) { //And if the current square's value is equal to the one to the right of it
-
-                                grid[i][k] *= 2; //Multiply the current square's value by 2
-                                grid[i][k + 1] = 0; //And empty the old square
-                                currentScore += grid[i][k];
-                                break; //End the for loop
 
 
-                            }
-                        }
+    static void moveLeft(){
+
+        for (int i = 0; i < GRID_SIZE; i++){
+
+            //Move tiles
+            for(int j = GRID_SIZE - 1; j > 0; j--){
+
+                    if(grid[i][j-1] == 0) {
+
+                        grid[i][j - 1] = grid[i][j];
+                        grid[i][j] = 0;
+
                     }
-                }
+
             }
+
+            //Merge tiles
+            for(int j = 0; j < GRID_SIZE-1; j++) {
+
+                if(grid[i][j+1] == grid[i][j]) {
+                    grid[i][j] *= 2;
+                    grid[i][j+1] = 0;
+                    currentScore += grid[i][j];
+                }
+
+            }
+
+            //Move tiles again
+            for(int j = GRID_SIZE - 1; j > 0; j--) {
+
+                if(grid[i][j-1] == 0) {
+
+                    grid[i][j - 1] = grid[i][j];
+                    grid[i][j] = 0;
+
+                }
+
+            }
+
         }
+
     }
 
     /**
@@ -203,31 +217,43 @@ public class Play2048 {
      */
     static void moveRight(){
 
-        for (int i = gridHeight-1; i >= 0; i--) {
-            for (int j = gridWidth-1; j >= 0; j--) {
+        for (int i = 0; i < GRID_SIZE; i++){
 
-                if(grid[i][j] != 0) {     //If the current location is not empty
+            //Move tiles
+            for(int j = 0; j < GRID_SIZE - 1; j++){
 
-                    for(int k = j; k < gridWidth; k++){ //Loop through all of the empty squares to the left of the current number
+                if(grid[i][j+1] == 0) {
 
-                        if(grid[i][k] == 0){ //If the current square is empty
+                    grid[i][j + 1] = grid[i][j];
+                    grid[i][j] = 0;
 
-                            grid[i][k] = grid[i][k-1]; //Fill the square with the number to the left of it
-                            grid[i][k-1] = 0; //Then empty the old square
-
-                        }
-                        if(k > 0) { //If the current square is not the one on the left edge
-                            if (grid[i][k - 1] == grid[i][k]) { //And if the current square's value is equal to the one to the left of it
-
-                                grid[i][k] *= 2; //Multiply the current square's value by 2
-                                grid[i][k - 1] = 0; //And empty the old square
-                                currentScore += grid[i][k];
-                                break;
-                            }
-                        }
-                    }
                 }
+
             }
+
+            //Merge tiles
+            for(int j = GRID_SIZE - 1; j > 0; j--) {
+
+                if(grid[i][j-1] == grid[i][j]) {
+                    grid[i][j] *= 2;
+                    grid[i][j-1] = 0;
+                    currentScore += grid[i][j];
+                }
+
+            }
+
+            //Move tiles again
+            for(int j = 0; j < GRID_SIZE - 1; j++){
+
+                if(grid[i][j+1] == 0) {
+
+                    grid[i][j + 1] = grid[i][j];
+                    grid[i][j] = 0;
+
+                }
+
+            }
+
         }
     }
 
@@ -239,33 +265,43 @@ public class Play2048 {
      */
     static void moveUp(){
 
-        for (int i = 0; i < gridHeight; i++) {
-            for (int j = 0; j < gridWidth; j++) {
+        for (int j = 0; j < GRID_SIZE; j++){
 
-                if(grid[i][j] != 0) {     //If the current location is not empty
+            //Move tiles
+            for(int i = GRID_SIZE - 1; i > 0; i--){
 
-                    for(int k = i; k >= 0; k--){ //Loop through all of the empty squares to the above of the current number
+                if(grid[i-1][j] == 0) {
 
-                        if(grid[k][j] == 0){ //If the current square is empty
+                    grid[i-1][j] = grid[i][j];
+                    grid[i][j] = 0;
 
-                            grid[k][j] = grid[k+1][j]; //Fill the square with the number below it
-                            grid[k+1][j] = 0; //Then empty the old square
-
-                        }
-                        if(k < gridHeight-1) { //If the current square is not the one on the top edge
-                            if (grid[k + 1][j] == grid[k][j]) { //And if the current square's value is equal to the one to below it
-
-                                grid[k][j] *= 2; //Multiply the current square's value by 2
-                                grid[k+1][j] = 0; //And empty the old square
-                                currentScore += grid[k][j];
-                                break; //End the for loop
-
-
-                            }
-                        }
-                    }
                 }
+
             }
+
+            //Merge tiles
+            for(int i = 0; i < GRID_SIZE - 1; i++) {
+
+                if(grid[i+1][j] == grid[i][j]) {
+                    grid[i][j] *= 2;
+                    grid[i+1][j] = 0;
+                    currentScore += grid[i][j];
+                }
+
+            }
+
+            //Move tiles again
+            for(int i = GRID_SIZE - 1; i > 0; i--){
+
+                if(grid[i-1][j] == 0) {
+
+                    grid[i-1][j] = grid[i][j];
+                    grid[i][j] = 0;
+
+                }
+
+            }
+
         }
     }
 
@@ -276,33 +312,43 @@ public class Play2048 {
      */
     static void moveDown(){
 
-        for (int i = gridHeight - 1; i >= 0; i--) {
-            for (int j = gridWidth - 1; j >= 0; j--) {
+        for (int j = 0; j < GRID_SIZE; j++){
 
-                if(grid[i][j] != 0) {     //If the current location is not empty
+            //Move tiles
+            for(int i = 0; i < GRID_SIZE - 1; i++){
 
-                    for(int k = i; k < gridHeight; k++){ //Loop through all of the empty squares to the above of the current number
+                if(grid[i+1][j] == 0) {
 
-                        if(grid[k][j] == 0){ //If the current square is empty
+                    grid[i+1][j] = grid[i][j];
+                    grid[i][j] = 0;
 
-                            grid[k][j] = grid[k-1][j]; //Fill the square with the number below it
-                            grid[k-1][j] = 0; //Then empty the old square
-
-                        }
-                        if(k > 0) { //If the current square is not the one on the top edge
-                            if (grid[k - 1][j] == grid[k][j]) { //And if the current square's value is equal to the one to below it
-
-                                grid[k][j] *= 2; //Multiply the current square's value by 2
-                                grid[k-1][j] = 0; //And empty the old square
-                                currentScore += grid[k][j];
-                                break; //End the for loop
-
-
-                            }
-                        }
-                    }
                 }
+
             }
+
+            //Merge tiles
+            for(int i = GRID_SIZE - 1; i > 0; i--) {
+
+                if(grid[i-1][j] == grid[i][j]) {
+                    grid[i][j] *= 2;
+                    grid[i-1][j] = 0;
+                    currentScore += grid[i][j];
+                }
+
+            }
+
+            //Move tiles again
+            for(int i = 0; i < GRID_SIZE - 1; i++){
+
+                if(grid[i+1][j] == 0) {
+
+                    grid[i+1][j] = grid[i][j];
+                    grid[i][j] = 0;
+
+                }
+
+            }
+
         }
     }
 
@@ -368,16 +414,16 @@ public class Play2048 {
 
     }
 
-    static int getGridHeight() {
-        return gridHeight;
-    }
-
-    static int getGridWidth() {
-        return gridWidth;
+    static int getGridSize() {
+        return GRID_SIZE;
     }
 
     static int getHighestNumber() {
         return highestNumber;
+    }
+
+    static void setHighestNumber(int highestNumber) {
+        Play2048.highestNumber = highestNumber;
     }
 
     static int getCurrentScore() {

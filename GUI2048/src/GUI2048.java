@@ -16,14 +16,13 @@ import javafx.stage.Stage;
 
 public class GUI2048 extends Application {
 
-    private int gridWidth = Play2048.getGridWidth(); //Width of the grid holding the numbers
-    private int gridHeight = Play2048.getGridHeight(); //Height of the grid holding the numbers
+    private int GRID_SIZE = Play2048.getGridSize(); //Size of the grid holding the numbers
 
     private String emptyColourHex = "878787"; //Colour of an empty tile
     private String baseColourHex ="ffeeb2"; //The base colour of a filled tile. Will change as the numbers get bigger
     private int baseColourDec = Integer.parseInt(baseColourHex, 16); //The base color converted to integer form
 
-    private TextField[][] tile = new TextField[gridHeight][gridWidth]; //The tiles that hold the numbers
+    private TextField[][] tile = new TextField[GRID_SIZE][GRID_SIZE]; //The tiles that hold the numbers
 
     /*Panes*/
     private GridPane numberGrid = new GridPane(); //The grid that holds the numbers
@@ -76,8 +75,8 @@ public class GUI2048 extends Application {
         numberGrid.setBorder(Border.EMPTY); //Remove the grid border
 
         //For each tile in the grid
-        for(int i = 0; i < gridHeight; i++){
-            for(int j = 0; j < gridWidth; j++){
+        for(int i = 0; i < GRID_SIZE; i++){
+            for(int j = 0; j < GRID_SIZE; j++){
 
                 tile[j][i] = new TextField(); //Create a text field object
 
@@ -146,8 +145,11 @@ public class GUI2048 extends Application {
     private void refreshBoard(){
 
         //For each tile
-        for(int i = 0; i < gridHeight; i++){
-            for(int j = 0; j < gridWidth; j++){
+        for(int i = 0; i < GRID_SIZE; i++){
+            for(int j = 0; j < GRID_SIZE; j++){
+
+                if(Play2048.getGrid(i,j) >= Play2048.getHighestNumber())
+                    Play2048.setHighestNumber(Play2048.getGrid(i,j));
 
                 if(Play2048.getGrid(i,j)!=0) { //If the value of the current square is not 0
                     tile[j][i].setText(String.valueOf(Play2048.getGrid(i, j))); //Put the number in the text box
@@ -172,12 +174,14 @@ public class GUI2048 extends Application {
 
             }
 
+            if(Play2048.getHighestNumber() >= 2048) //If any tile is 2048
+                labelPlayerMessage.setText("You've reached 2048! You won!"); //Write a win message
+
         }
 
         labelCurrentScore.setText(String.valueOf(Play2048.getCurrentScore())); //Update the score label
 
-        if(Play2048.getHighestNumber() == 2048) //If any tile is 2048
-            labelPlayerMessage.setText("You've reached 2048! You won!"); //Write a win message
+
 
     }
 
