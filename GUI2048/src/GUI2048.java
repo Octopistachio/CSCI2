@@ -19,7 +19,7 @@ public class GUI2048 extends Application {
     private int GRID_SIZE = Play2048.getGridSize(); //Size of the grid holding the numbers
 
     private String emptyColourHex = "878787"; //Colour of an empty tile
-    private String baseColourHex ="ffeeb2"; //The base colour of a filled tile. Will change as the numbers get bigger
+    private String baseColourHex ="c5ff75"; //The base colour of a filled tile. Will change as the numbers get bigger
     private int baseColourDec = Integer.parseInt(baseColourHex, 16); //The base color converted to integer form
 
     private TextField[][] tile = new TextField[GRID_SIZE][GRID_SIZE]; //The tiles that hold the numbers
