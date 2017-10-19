@@ -4,7 +4,7 @@ public class TestRecursion {
 
     public static void main(String[] args) {
 
-        System.out.println("Should be abc: " + Recursion.stringClean("aabbbbbbcccc"));
+       /* System.out.println("Should be abc: " + Recursion.stringClean("aabbbbbbcccc"));
         System.out.println("Should be Helo: " + Recursion.stringClean("Hello"));
         System.out.println("Should be ea: " + Recursion.stringClean("eeeeeeeeaaa"));
 
@@ -16,10 +16,8 @@ public class TestRecursion {
         System.out.println("Should be 0: " + Recursion.countDigit(123414, 5));
 
         System.out.println();
-
-        System.out.println("Should be true: " + Recursion.isBalanced("( { [   ] } )"));
-        System.out.println("Should be false: " + Recursion.isBalanced("( { ) } "));
-        System.out.print("Should be true : " + Recursion.isBalanced("{ { { [ [ ( ) ] ] } } }"));
+*/
+        System.out.println("Should be true: " + Recursion.isBalanced("( { [ ] } )"));
 
 
     }
