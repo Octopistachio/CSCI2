@@ -37,64 +37,53 @@ public class Recursion {
 
     private static boolean isBalanced(String str, int count) {
 
-        if(count < str.length()) {
+        if (str.length() % 2 != 0) return false;
+        if (count < str.length()) {
 
             if (str.charAt(count) == '(' && str.charAt(count + 1) == ')') {
                 str = removeChar(str, count);
                 str = removeChar(str, count);
                 return isBalanced(str, 0);
-            }
-            else if (str.charAt(count) == '[' && str.charAt(count + 1) == ']') {
+            } else if (str.charAt(count) == '[' && str.charAt(count + 1) == ']') {
                 str = removeChar(str, count);
                 str = removeChar(str, count);
                 return isBalanced(str, 0);
-            }
-            else if (str.charAt(count) == '{' && str.charAt(count + 1) == '}') {
+            } else if (str.charAt(count) == '{' && str.charAt(count + 1) == '}') {
                 str = removeChar(str, count);
                 str = removeChar(str, count);
                 return isBalanced(str, 0);
-            }
-            else
-                return isBalanced(str, count + 1);
+            } else return isBalanced(str, count + 1);
 
         }
-        if(str.matches(""))
-            return true;
-
-        return false;
-
-
+        return str.matches("");
     }
 
+    public static boolean splitArray(int [] array) { return splitArray(array, 0); }
+
+    private static boolean splitArray(int [] array, int count)
+    {
+
+        if(array.length == 2) return(array[count] == array[count + 1]);
+
+        if(count<array.length) {
 
 
-    /*private static  boolean isBalanced(String str, int count){
-        System.out.println(str);
+            if(array.length % 2 == 0) {
 
-        if(count < str.length()/2) {
 
-            if (str.charAt(count) == '{' && str.charAt(str.length() - 1 - count) == '}') return isBalanced(str, count + 1);
-            else if (str.charAt(count) == '(' && str.charAt(str.length() - 1 - count) == ')') return isBalanced(str, count + 1);
-            else if (str.charAt(count) == '[' && str.charAt(str.length() - 1 - count) == ']') return isBalanced(str, count + 1);
-            else{
-                if(str.charAt(count) == '{' && str.charAt(count + 1) == '}') {
-                    str = str.substring(0, count) + str.substring(count + 1);
-                    str = str.substring(0, count+1) + str.substring(count + 2);
-                    return isBalanced(str, count + 1);
-                }
-                else if(str.charAt(count) == '[' && str.charAt(count + 1) == ']') {
-                    str = str.substring(0, count) + str.substring(count + 1);
-                    str = str.substring(0, count+1) + str.substring(count + 2);
-                    return isBalanced(str, count + 1);
-                }
-                else if(str.charAt(count) == '(' && str.charAt(count + 1) == ')') {
-                    str = str.substring(0, count) + str.substring(count + 1);
-                    str = str.substring(0, count+1) + str.substring(count + 2);
-                    return isBalanced(str, count + 1);
-                }
-                else return false;
+
             }
-        }
-        return true;
-    }*/
+            else {
+
+
+
+
+                }
+
+            }
+
+
+        return false;
+    }
+
 }
