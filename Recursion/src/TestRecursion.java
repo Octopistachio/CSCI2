@@ -30,7 +30,7 @@ public class TestRecursion {
         int[] array2 = {5,3,2}; System.out.println("Should be true: " + Recursion.splitArray(array2));
         int[] array3 = {3,5,2}; System.out.println("Should be true: " + Recursion.splitArray(array3));
         int[] array4 = {3,5,3}; System.out.println("Should be false: " + Recursion.splitArray(array4));
-        int[] array5 = {3,5,3}; System.out.println("Should be false: " + Recursion.splitArray(array5));
+        int[] array5 = {4, 5, 7, 2}; System.out.println("Should be true: " + Recursion.splitArray(array5));
 
         System.out.println();
 
