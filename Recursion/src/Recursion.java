@@ -1,4 +1,4 @@
-/**
+/*
  * Recursion testing
  *
  * @author Matthew Wilson
@@ -31,6 +31,7 @@ public class Recursion {
     }
     return str; //If the counter reaches the end of the string, return the string
 }
+
     public static int countDigit(int num, int digit){ return countDigit(num, digit, 0); }
 
     private static int countDigit(int num, int digit, int timesAppeared){
@@ -54,8 +55,6 @@ public class Recursion {
 
         if (str.length() % 2 != 0) return false; //If the string's length is not even, there is a missing/extra bracket, so return false
         if (count < str.length()) { //If the counter is less than the length of the string
-
-
             if (str.charAt(count) == '(' && str.charAt(count + 1) == ')') { //If the bracket is identical to the one next to it
                 str = removeChar(str, count); //Remove the bracket
                 str = removeChar(str, count); //Remove the bracket
@@ -69,7 +68,6 @@ public class Recursion {
                 str = removeChar(str, count); //Remove the bracket
                 return isBalanced(str, 0); //Recurse the method, and reset the count
             } else return isBalanced(str, count + 1); //If the bracket is not identical to the one next to it, recurse the method and increase the count by 1
-
         }
         return str.matches(""); //If the string is empty, return true
     }
@@ -93,5 +91,25 @@ public class Recursion {
                 return splitArray(array, count + 1); //Increase the count by 1
         }
     }
+
+    public static void trickyHanoi(int disks){ trickyHanoi(disks, "A", "B", "C"); }
+
+    private static void trickyHanoi(int n, String start, String auxiliary, String end) {
+        if (n == 1) { //If there is only one disk on a peg
+            printHanoi(start, auxiliary); //Move it from the start to the second
+            printHanoi(auxiliary, end); //Move it from the second to the end
+        } else { //If there is more than one disk on a peg
+            trickyHanoi(n - 1, start, auxiliary, end); //Recurse through the program
+            printHanoi(start, auxiliary); //Move it from start to the second
+            trickyHanoi(n - 1, end, auxiliary, start); //Recurse the program backwards
+            printHanoi(auxiliary, end); //Move it from the second to the end
+            trickyHanoi(n - 1, start, auxiliary, end); //Recurse through the program
+        }
+    }
+
+    /**
+     * Print the Towers of Hanoi text
+     */
+    private static void printHanoi(String a, String b) { System.out.println("Move disk from peg " + a + " to peg " + b + "."); }
 
 }
