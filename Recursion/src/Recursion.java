@@ -13,12 +13,12 @@ public class Recursion {
      * A method I needed to remove a single character from a string
      *
      * @param str The string a character is needed to be removed from
-     * @param index The index of the character
+     * @param index The index of the ch
+    public static String saracter
      * @return The string with the character removed
      */
     private static String removeChar(String str, int index){ return str.substring(0, index) + str.substring(index + 1); }
-
-    public static String stringClean(String str) { return stringClean(str, 0); }
+tringClean(String str) { return stringClean(str, 0); }
 
     private static String stringClean(String str, int count) {
 
