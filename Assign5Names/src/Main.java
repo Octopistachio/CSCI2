@@ -8,7 +8,5 @@ public class Main {
         System.out.println(name.getName());
         System.out.println(name.getRank(0));
         System.out.println(name.getRank(1));
-
-
     }
 }

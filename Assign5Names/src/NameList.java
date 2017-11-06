@@ -10,7 +10,6 @@ public class NameList {
 
     public NameList() {
 
-        /* Names */
         try { //Try/catch to make sure the file path exists
 
             File file = new File("names-data.txt"); //Create a file object
@@ -23,14 +22,9 @@ public class NameList {
                 char[] charArray = line.toCharArray(); //Change the string to an array of characters
                 StringBuilder str = new StringBuilder(); //Create a string builder
 
-
                 for (char element : charArray) { //For each element in the array
-
-                    if (element == ' ') //If the current char is a space
-                        break; //End the loop
-                    else //If the current char is not a space
-                        str.append(element); //Add it to the string
-
+                    if (element == ' ') break; //If the current char is a space, end the loop
+                    else str.append(element); //If the current char is not a space, add it to the string
                 }
                 Names.add(str.toString()); //Add the string to Names
             }
