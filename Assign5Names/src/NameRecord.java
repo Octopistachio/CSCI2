@@ -1,3 +1,12 @@
+/*
+* This class takes the list of names
+* from NameList and the list of each ranking
+* and outputs it.
+*
+* @author Matthew Wilson
+* @date 11/3/2017
+*/
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -10,12 +19,18 @@ public class NameRecord {
     /**
      * Constructor for NameRecord
      *
-     * @param reader The name input by the user
+     * @param name The name input by the user
      */
+    public NameRecord(String name) {
+
+        this.name = name;
+        initializeRankings(); //Put the rankings into an array
+    }
+
     public NameRecord(Scanner reader) {
 
         System.out.print("Input a name: "); //Console instructions
-        name = reader.nextLine(); //Record the name the user types
+        this.name = reader.nextLine(); //Record the name the user types
         initializeRankings(); //Put the rankings into an array
     }
 
@@ -42,7 +57,6 @@ public class NameRecord {
                             ranking += Character.getNumericValue(charArray[i]) * placement; //Increase the ranking
                             placement *= 10; //Increase the placement tenfold
                         } else { //If the character is a space
-                            if(ranking <= 0) ranking = 1000; //If the ranking is 0 or lower, change it to 1000
                             rankingArray[decadeIndex] = ranking; //Add the ranking to the array
                             decadeIndex--; //Decrease the index
                             ranking = 0; //Reset the ranking
@@ -87,7 +101,7 @@ public class NameRecord {
             if (nameIndex >= nameListObj.Names.size()) throw new RuntimeException("This name is not on the rankings!"); //If the index is higher than the size of the array, the name was not found. Throw an error.
         }
         catch (RuntimeException e) {
-            e.printStackTrace();
+            System.err.println(e.toString());
         }
 
         return nameIndex;
@@ -100,6 +114,6 @@ public class NameRecord {
      * @return The ranking of the entered decade
      */
     int getRank(int decade) {
-        return rankingArray[decade];
+        return rankingArray[decade]<=0?1000:rankingArray[decade];
     }
 }

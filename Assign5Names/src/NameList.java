@@ -1,3 +1,11 @@
+/*
+* This class takes all the names from names-data.txt
+* and puts it into an ArrayList
+*
+* @author Matthew Wilson
+* @date 11/3/2017
+*/
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
