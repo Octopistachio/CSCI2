@@ -15,7 +15,6 @@ public class Synonyms {
 
         URL[] corpus = new URL[0];
 
-
         try {
             corpus = new URL[]{
 
@@ -35,18 +34,24 @@ public class Synonyms {
                     new URL("http://www.gutenberg.org/cache/epub/844/pg844.txt")
 
             };
-        } catch (MalformedURLException e) {
+        }
+        catch (MalformedURLException e) {
             e.printStackTrace();
         }
 
         Synonyms mySyn = new Synonyms(corpus);
+
+        System.out.println(mySyn.calculateCosineSimilarity("shark", "whale"));
+        System.out.println(mySyn.calculateCosineSimilarity("shark", "horse"));
+        System.out.println(mySyn.calculateCosineSimilarity("shark", "dancing"));
+        System.out.println(mySyn.calculateCosineSimilarity("shark", "kill"));
+
 
     }
 
     public Synonyms (URL[] corpus) {
 
         parseCorpus(corpus);
-        printDescriptor();
 
     }
 
@@ -94,16 +99,57 @@ public class Synonyms {
 
     }
 
-    public void printDescriptor(){
+    public double calculateCosineSimilarity (String word1, String word2) {
 
-        for (Map.Entry<String, HashMap<String, Integer>> entry : descriptors.entrySet()) {
-            String key = entry.getKey();
-            HashMap<String, Integer> value = entry.getValue();
+        if (word1.equals(word2)) return 1; //Return 1 if the words are identical
 
-            System.out.println("Word: " + key + "\tWords in the same sentence: " + value);
+        HashMap<String, Integer> word1Map = descriptors.get(word1);
+        HashMap<String, Integer> word2Map = descriptors.get(word2);
+
+        HashMap<String, Integer> word1Matches = new HashMap<>();
+        HashMap<String, Integer> word2Matches = new HashMap<>();
+
+        try {
+            for (Map.Entry<String, Integer> entry1 : word1Map.entrySet()) { //For each word in the word1Map
+                String key1 = entry1.getKey();
+
+                for (Map.Entry<String, Integer> entry2 : word2Map.entrySet()) { //For each word in the word2Map
+                    String key2 = entry2.getKey();
+
+                    if (Objects.equals(key1, key2)) {
+
+                        word1Matches.put(key1, word1Map.get(key1));
+                        word2Matches.put(key2, word2Map.get(key2));
+                    }
+                }
+            }
+        }
+        catch (NullPointerException e) {
+            System.out.println("A word does not exist!");
+            return -1;
         }
 
-    }
+        double dotProduct = 0, magnitudeA = 0, magnitudeB = 0;
 
+        //Calculate dot product
+        for (Map.Entry<String, Integer> item : word1Matches.entrySet()) { //For each word in the word1Map
+            String key = item.getKey();
+            dotProduct += word1Matches.get(key) * word2Matches.get(key);
+        }
+
+        //Calculate magnitude a
+        for (String key : word1Matches.keySet()) {
+            magnitudeA += Math.pow(word1Matches.get(key), 2);
+        }
+
+        //Calculate magnitude b
+        for (String key : word2Matches.keySet()) {
+            magnitudeB += Math.pow(word2Matches.get(key), 2);
+        }
+
+        //return cosine similarity
+        return dotProduct / Math.sqrt(magnitudeA * magnitudeB);
+
+    }
 }
 

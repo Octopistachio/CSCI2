@@ -15,13 +15,15 @@
       <file leaf-file-name="Synonyms.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Synonyms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+            <state relative-caret-position="1517">
+              <caret line="152" column="5" lean-forward="false" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#parseCorpus#0;class#Synonyms#0" expanded="false" />
-                <marker date="1511558703615" expanded="true" signature="425:1367" ph="{...}" />
-                <marker date="1511558703615" expanded="true" signature="1400:1444" ph="{...}" />
+                <marker date="1511562373275" expanded="true" signature="424:1366" ph="{...}" />
+                <marker date="1511562373275" expanded="true" signature="1407:1451" ph="{...}" />
+                <marker date="1511562373275" expanded="true" signature="4751:5327" ph="{...}" />
+                <marker date="1511562373275" expanded="true" signature="4827:5317" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -234,7 +236,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3769716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -271,8 +273,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parseCorpus#0;class#Synonyms#0" expanded="false" />
-            <marker date="1511558703615" expanded="true" signature="425:1367" ph="{...}" />
-            <marker date="1511558703615" expanded="true" signature="1400:1444" ph="{...}" />
+            <marker date="1511562373275" expanded="true" signature="424:1366" ph="{...}" />
+            <marker date="1511562373275" expanded="true" signature="1407:1451" ph="{...}" />
+            <marker date="1511562373275" expanded="true" signature="4751:5327" ph="{...}" />
+            <marker date="1511562373275" expanded="true" signature="4827:5317" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -287,13 +291,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Synonyms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+        <state relative-caret-position="1517">
+          <caret line="152" column="5" lean-forward="false" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parseCorpus#0;class#Synonyms#0" expanded="false" />
-            <marker date="1511558703615" expanded="true" signature="425:1367" ph="{...}" />
-            <marker date="1511558703615" expanded="true" signature="1400:1444" ph="{...}" />
+            <marker date="1511562373275" expanded="true" signature="424:1366" ph="{...}" />
+            <marker date="1511562373275" expanded="true" signature="1407:1451" ph="{...}" />
+            <marker date="1511562373275" expanded="true" signature="4751:5327" ph="{...}" />
+            <marker date="1511562373275" expanded="true" signature="4827:5317" ph="{...}" />
           </folding>
         </state>
       </provider>
