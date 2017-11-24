@@ -1,12 +1,15 @@
+import javax.print.DocFlavor;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Synonyms {
 
-    private HashMap<String, HashMap<String, Integer>> descriptors;
+    private HashMap<String, HashMap<String, Integer>> descriptors = new HashMap<>();
 
     public static void main(String[] args) {
 
@@ -43,31 +46,64 @@ public class Synonyms {
     public Synonyms (URL[] corpus) {
 
         parseCorpus(corpus);
+        printDescriptor();
 
     }
 
     public void parseCorpus (URL[] corpus) {
 
-        for (URL url:corpus) {
+        for (URL url:corpus) { //For each URL
             try {
-                Scanner scanner = new Scanner(url.openStream()).useDelimiter("[.?!]|\\Z");
+                Scanner scanner = new Scanner(url.openStream()).useDelimiter("[.?!]|\\Z"); //Read each sentence in the URL
 
-                while (scanner.hasNext()) {
-                    String sentence = scanner.next();
-                    String[] wordList = sentence.split("\\s+");
+                while (scanner.hasNext()) { //While the file has another line
+                    String sentence = scanner.next().toLowerCase(); //Read it and set it to lowercase
+                    String[] wordsInSentence = sentence.split("\\s+"); //Make an array of each word in the sentence
 
-                    for (String word:wordList) {
-                        word = word.replaceAll("\\W+", "");
-                        System.out.println(word);
+                    for(int i = 0; i < wordsInSentence.length; i++) { //For each word in the sentence
+                        wordsInSentence[i] = wordsInSentence[i].replaceAll("\\W+", ""); //Remove all non-characters
                     }
 
+                    for (String word : wordsInSentence) { //For each word in the sentence
+
+                        HashMap<String, Integer> wordCount = new HashMap<>(); //Create a temporary hashmap to hold the counts of each other word in the sentence
+
+                        for (String otherWord : wordsInSentence) { //For each word in the sentence...
+
+                            if (!Objects.equals(word, otherWord) && !Objects.equals(otherWord, "")) { //...That is not the current word or an empty character
+
+                                if(descriptors.containsKey(word)) //If the main hashmap, descriptors, already has the word in it
+                                    wordCount = descriptors.get(word); //Grab the counts of each other word already in it and add to the temporary hashmap
+
+                                if(wordCount.get(otherWord) == null) //If the other word in the sentence is NOT in the hashmap
+                                    wordCount.put(otherWord, 1); //Set its count to one
+                                else //If the other word in the sentence IS in the hashmap
+                                    wordCount.put(otherWord, wordCount.get(otherWord)+1); //Add 1 to that word's count
+                            }
+
+                        }
+
+                        descriptors.put(word, wordCount); //Add our temporary hashmap to the main hashmap
+                    }
                 }
-                scanner.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+                scanner.close(); //Stop reading the file
+            } catch (IOException e) { //Catch any exceptions
+                e.printStackTrace(); //Print any exceptions
             }
         }
 
     }
 
+    public void printDescriptor(){
+
+        for (Map.Entry<String, HashMap<String, Integer>> entry : descriptors.entrySet()) {
+            String key = entry.getKey();
+            HashMap<String, Integer> value = entry.getValue();
+
+            System.out.println("Word: " + key + "\tWords in the same sentence: " + value);
+        }
+
+    }
+
 }
+
