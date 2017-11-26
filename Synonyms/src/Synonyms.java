@@ -41,10 +41,27 @@ public class Synonyms {
 
         Synonyms mySyn = new Synonyms(corpus);
 
-        System.out.println(mySyn.calculateCosineSimilarity("shark", "whale"));
-        System.out.println(mySyn.calculateCosineSimilarity("shark", "horse"));
-        System.out.println(mySyn.calculateCosineSimilarity("shark", "dancing"));
-        System.out.println(mySyn.calculateCosineSimilarity("shark", "kill"));
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        String wordToCheck = scanner.next();
+
+        String[] synonyms = new String[4];
+
+        System.out.println("Enter the choices: ");
+        for(int i = 0; i < synonyms.length; i++) {
+            System.out.print((i + 1) + ") ");
+            synonyms[i] = scanner.next();
+        }
+
+        System.out.println();
+
+        for (String synonym : synonyms) {
+            double similarity = mySyn.calculateCosineSimilarity(wordToCheck, synonym);
+            System.out.println(synonym + " " + similarity);
+        }
+
+
 
 
     }
@@ -125,7 +142,6 @@ public class Synonyms {
             }
         }
         catch (NullPointerException e) {
-            System.out.println("A word does not exist!");
             return -1;
         }
 
