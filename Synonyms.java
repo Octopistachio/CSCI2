@@ -62,10 +62,16 @@ public class Synonyms {
 
         System.out.println();
 
+        double highest = -2;
+        String closest = "";
         for (String synonym : synonyms) { //For each synonym
             double similarity = mySyn.calculateCosineSimilarity(wordToCheck, synonym); //Check the cosine similarity between the word and each synonym
             System.out.println(synonym + " " + similarity); //Print it
+            if(highest < similarity) closest = synonym; //If the current cosine is higher than the highest, set the closest synonym to the current synonym
         }
+
+        System.out.println("\nThe closest synonym: " + closest); //Print the closest synonym
+
     }
 
     /**
@@ -122,7 +128,6 @@ public class Synonyms {
                 e.printStackTrace(); //Print any exceptions
             }
         }
-
     }
 
     /**
@@ -136,52 +141,25 @@ public class Synonyms {
     public double calculateCosineSimilarity (String word1, String word2) {
 
         if (word1.equals(word2)) return 1; //Return 1 if the words are identical
+        else if(!descriptors.containsKey(word1) || !descriptors.containsKey(word2)) return -1; //Return -1 if a word isn't found
+        else { //If each word is unique, and both exist
 
-        HashMap<String, Integer> word1Map = descriptors.get(word1);
-        HashMap<String, Integer> word2Map = descriptors.get(word2);
+            double dotProduct = 0, word1Sum = 0, word2Sum = 0;
 
-        HashMap<String, Integer> word1Matches = new HashMap<>();
-        HashMap<String, Integer> word2Matches = new HashMap<>();
+            HashMap<String, Integer> word1Map = descriptors.get(word1);
+            HashMap<String, Integer> word2Map = descriptors.get(word2);
 
-        try {
-            for (Map.Entry<String, Integer> entry1 : word1Map.entrySet()) { //For each word in the word1Map
-                String key1 = entry1.getKey();
+            for(Map.Entry<String, Integer> item : word1Map.entrySet())
+                dotProduct += item.getValue() * word2Map.getOrDefault(item.getKey(), 0); //Multiply the value in word1Map with the value in word2Map and add it to the dotProduct
 
-                for (Map.Entry<String, Integer> entry2 : word2Map.entrySet()) { //For each word in the word2Map
-                    String key2 = entry2.getKey();
+            for (Map.Entry<String, Integer> item : word1Map.entrySet()) //For each word in the word1Map
+                word1Sum += item.getValue() * item.getValue(); //Square the current value and add it to the word1Sum
 
-                    if (Objects.equals(key1, key2)) {
+            for (Map.Entry<String, Integer> item : word2Map.entrySet()) //For each word in the word2Map
+                word2Sum += item.getValue() * item.getValue(); //Square the current value and add it to the word2Sum
 
-                        word1Matches.put(key1, word1Map.get(key1));
-                        word2Matches.put(key2, word2Map.get(key2));
-                    }
-                }
-            }
+
+            return dotProduct / Math.sqrt(word1Sum * word2Sum); //Return cosine similarity
         }
-        catch (NullPointerException e) { //If a word isn't found, return -1
-            return -1;
-        }
-
-        double dotProduct = 0, magnitudeA = 0, magnitudeB = 0;
-
-        //Calculate dot product
-        for (Map.Entry<String, Integer> item : word1Matches.entrySet()) { //For each word in the word1Map
-            String key = item.getKey();
-            dotProduct += word1Matches.get(key) * word2Matches.get(key);
-        }
-
-        //Calculate magnitude a
-        for (String key : word1Matches.keySet()) {
-            magnitudeA += Math.pow(word1Matches.get(key), 2);
-        }
-
-        //Calculate magnitude b
-        for (String key : word2Matches.keySet()) {
-            magnitudeB += Math.pow(word2Matches.get(key), 2);
-        }
-
-        //return cosine similarity
-        return dotProduct / Math.sqrt(magnitudeA * magnitudeB);
-
     }
 }
