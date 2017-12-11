@@ -1,38 +1,35 @@
-import sun.reflect.generics.tree.Tree;
+/**
+ * This class takes files and translates them
+ * to or from Morse Code
+ *
+ * @author Matt Wilson
+ * @date 11/28/17
+ */
 
 import java.io.*;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class MorseCode {
+public class MorseCode{
+
+    private TreeNode root;
 
     public MorseCode() throws Exception {
-        TreeNode root = new TreeNode();
+        root = new TreeNode();
         createMorseTree();
     }
 
-    private static TreeMap<Character, String> toCode = new TreeMap<>(); //Encodes characters to Morse Code
+    private TreeMap<Character, String> toCode = new TreeMap<>(); //Encodes characters to Morse Code
 
-    private static TreeNode root = new TreeNode();
-
-    public static class TreeNode {
+    public class TreeNode {
         private char letter;
         private TreeNode left;
         private TreeNode right;
 
-        public static final char NEWLETTER = '@';
-        public static final char SPACE = '*';
-        public static final char NEWLINE = '+';
-
-
         public TreeNode() {
-            letter = NEWLETTER;
             left = null;
             right = null;
         }
-
-        public char getLetter() { return letter; }
-        public void setLetter(char letter) { this.letter = letter; }
 
         public TreeNode getLeft() { return left; }
         public void setLeft(TreeNode left) { this.left = left; }
@@ -41,12 +38,13 @@ public class MorseCode {
         public void setRight(TreeNode right) { this.right = right; }
     }
 
-    public static void main(String[] args) throws Exception {
-        encodeFile("mcgee.txt", "mcgeeMattCopy.encoded");
-        decodeFile("mcgee.encoded", "mcgeeMattCopy.txt");
-    }
-
-    public static void encodeFile(String inputFileName, String outputFileName) throws Exception {
+    /**
+     * Takes a file and translates it to Morse
+     *
+     * @param inputFileName The name of the file being translated
+     * @param outputFileName The new file that will be created from the translation
+     */
+    public void encodeFile(String inputFileName, String outputFileName) throws Exception {
 
         PrintWriter writer = new PrintWriter(outputFileName); //The writer to the encoded file
         File file = new File(inputFileName); //The file to be encoded's input
@@ -81,45 +79,45 @@ public class MorseCode {
         line.close(); //Close the scanner
     }
 
-    public static void decodeFile(String inputFileName, String outputFileName) throws Exception {
+    /**
+     * Takes a file and translates it from Morse
+     *
+     * @param inputFileName The name of the file being translated
+     * @param outputFileName The new file that will be created from the translation
+     */
+    public void decodeFile(String inputFileName, String outputFileName) throws Exception {
 
-        PrintWriter writer = new PrintWriter(outputFileName); //The writer to the encoded file
-        File file = new File(inputFileName); //The file to be encoded's input
+        PrintWriter writer = new PrintWriter(outputFileName); //The writer to the decoded file
+        File file = new File(inputFileName); //The file to be decoded's input
         Scanner line = new Scanner(file); //The line reader
 
-        String signal = "";
-        StringBuffer result = new StringBuffer();
-        TreeNode current = root;
+        String signal = ""; //The morse signal
+        TreeNode current = root; //The current node
 
         while (line.hasNextLine()) { //While there is a new line
-            String value = line.nextLine();
+            String value = line.nextLine(); //Set the value equal to the next line
 
-            for (int i = 0; i < value.length(); i++) {
-                signal = value.substring(i, i + 1);
+            for (int i = 0; i < value.length(); i++) { //For each character on the line
+                signal = value.substring(i, i + 1); //Grab the current character
 
-                if (signal.equals(".")) {
-                    System.out.println(".");
-                    if (current.getLeft() != null) {
-                        current = current.getLeft();
-                    } else {
-                        current.setLeft(new TreeNode());
-                        current = current.getLeft();
+                if (signal.equals(".")) { //If it is a .
+                    if (current.getLeft() != null) { //And the left node isn't null
+                        current = current.getLeft(); //Go left
+                    } else { //If the node is null
+                        current.setLeft(new TreeNode()); //Set the left node to a new node
+                        current = current.getLeft(); //And get the left node
                     }
-                } else if (signal.equals("-")) {
-                    System.out.println("-");
-                    if (current.getRight() != null) {
-                        current = current.getRight();
-                    } else {
-                        current.setRight(new TreeNode());
-                        current = current.getRight();
+                } else if (signal.equals("-")) { //If it is a -
+                    if (current.getRight() != null) { //And the right node isn't null
+                        current = current.getRight(); //Go right
+                    } else { //If the node is null
+                        current.setRight(new TreeNode()); //Set the right node to a new node
+                        current = current.getRight(); //And get the right node
                     }
-                } else {
-                    System.out.println("other");
-                    current = root;
+                } else { //If it is not either of those signals
+                    current = root; //Restart the loop
                 }
             }
-
-            System.out.println(current.getLetter());
         }
     }
 
